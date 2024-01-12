@@ -8,7 +8,7 @@
                     d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
             </svg>
         </span>
-        <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+        <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-yellow-200">
             {{ props.titulo }}
             <span
                 class="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3">Actual</span>
@@ -16,7 +16,7 @@
         <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
             {{ props.subTitulo }}
         </time>
-        <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+        <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400 text-pretty">
             {{ props.descripsion }}
         </p>
         <a v-if="props.href" :href="props.href"

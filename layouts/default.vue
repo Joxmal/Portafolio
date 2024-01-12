@@ -17,8 +17,20 @@ import '@fontsource-variable/onest';
 </script>
 
 <style>
+html {
+  scroll-behavior: smooth;
+}
+
+
 body{
     @apply dark:bg-black bg-sky-200 ;
     font-family: 'Onest Variable', sans-serif;
 }
+
+
+/* @media (prefers-reduced-motion: no-preference){
+    html{
+        scroll-behavior: auto;
+    }
+} */
 </style>
