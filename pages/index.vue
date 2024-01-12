@@ -81,9 +81,15 @@
 <script setup>
 // import {motionFadeUpDelay} from '/assets/Animations/VueUseMotion'
 
+useHead({
+  htmlAttrs:{
+    lang:'es'
+  }
+})
+
 useSeoMeta({
   title:'Portafolio de José Montes programador Front End',
-  description:'Soy un desarrollador Junior con 1 año de experiencia que siempre busca una solución óptima que satisfaga las necesidades'
+  description:'Soy un desarrollador Junior con 1 año de experiencia que siempre busca una solución óptima que satisfaga las necesidades',
 })
 
 const LinksNav ={
