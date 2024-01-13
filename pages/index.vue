@@ -102,7 +102,7 @@
   
 <script setup>
 import {initCarousels} from 'flowbite'
-import {motionFadeUpDelay,motionFadeUpDelayOld} from '../assets/Animations/VueUseMotion.js'
+import {motionFadeUpDelay,motionFadeUpDelayOld} from '../assets/animations/VueUseMotion.js'
 
 
 onMounted(()=>{
