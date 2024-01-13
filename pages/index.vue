@@ -1,6 +1,6 @@
 <template>
   <div class=" w-full md:w-[740px] mx-auto ">
-    <section class="pt-14 md:pt-32 " >
+    <section class="pt-14 md:pt-32 " v-motion="motionFadeUpDelayOld">
       <div class="flex gap-4">
         <img class=" rounded-full size-24 mb-4 md:size-12" alt="foto José Montes" src="/yo.jpg">
         <a 
@@ -14,7 +14,7 @@
       </div>
 
 
-      <h1 class="text-black dark:text-white font-bold justify-start flex flex-col-reverse md:flex-row gap-x-4 pb-10">
+      <div class="text-black dark:text-white font-bold justify-start flex flex-col-reverse md:flex-row gap-x-4 pb-10">
         <h1 class=" text-3xl md:text-5xl">Hola, soy José Montes</h1>
         <a 
         class="justify-center items-center hidden md:flex" 
@@ -24,7 +24,7 @@
         >
           <Badge class="">Disponible para trabajar </Badge>
         </a>
-      </h1>
+      </div>
       <h2 class="text-2xl opacity-85 text-wrap">
         <span></span>
         <span class="text-blue-700 dark:text-yellow-200/90">Desarrollador Web frontEnd</span>
@@ -45,8 +45,8 @@
       </nav>
     </section>
     
-    <section class=" my-20 pb-24" id="experiencia">
-      <div class="ml-4 mb-4 block min-[305px]:flex sm:items-center sm:justify-start">
+    <section  class=" my-20 pb-24" id="experiencia" v-motion="motionFadeUpDelayOld">
+      <div class="ml-4 mb-4 block min-[305px]:flex sm:items-center sm:justify-start gap-2">
         <h2 class="text-2xl font-semibold block items-center gap-3 text-pretty">Experiencia Laboral 
         </h2>
         <Icon name="uil:suitcase-alt" class="text-3xl"/>
@@ -65,8 +65,31 @@
           descripsion="Día a día mantengo una constante disciplina para mejorar como desarrollador y como persona"
         />
       </Experiencia>
-
     </section>
+
+    <section class="my-20 pb-24">
+      <div class="ml-4 mb-4 flex items-center start-0 gap-2" >
+        <h2 class="text-2xl font-semibold">Proyectos</h2>
+        <Icon name="octicon:project-symlink-16" class="text-2xl"></Icon>
+      </div>
+
+      <div class="flex flex-col gap-y-4">
+
+          <CardsProyecto v-motion="motionFadeUpDelay"
+            titulo="sistema de gestion insterna ofinicina de alcaldia santiago mariño aragua"
+            descripsion="creado con la finalidad de optimizar las tareas diarias y actividades realizadas por el departamento de informatica, gracias a esto se mejoro el rendimiento un 50%"
+            :imagenes="proyectos.SGI.imagenes"
+          /> 
+
+          <CardsProyecto v-motion="motionFadeUpDelay"
+            titulo="sistema de gestion insterna ofinicina de alcaldia santiago mariño aragua"
+            descripsion="creado con la finalidad de optimizar las tareas diarias y actividades realizadas por el departamento de informatica, gracias a esto se mejoro el rendimiento un 50%"
+            :imagenes="proyectos.SGI.imagenes"
+          /> 
+
+      </div>
+    </section>
+
   </div>
 
 
@@ -79,7 +102,13 @@
 </template>
   
 <script setup>
-// import {motionFadeUpDelay} from '/assets/Animations/VueUseMotion'
+import {initCarousels} from 'flowbite'
+import {motionFadeUpDelay,motionFadeUpDelayOld} from '/assets/Animations/VueUseMotion'
+
+
+onMounted(()=>{
+  initCarousels()
+})
 
 useHead({
   htmlAttrs:{
@@ -108,6 +137,29 @@ const LinksNav ={
     bg: 'dark:text-white',
     href:'https://github.com/Joxmal'
   }
+
+}
+
+
+//imagenes de los proyecyos
+
+const proyectos={
+  SGI:{
+    imagenes:{
+      1:{
+        src:'/proyectos/SGI.jpg',
+        alt:'imagen de la administracion de las asistencias diarias de cada trabajador '
+      },
+      2:{
+        src:'/proyectos/SGI.jpg',
+        alt:'imagen de la administracion de las asistencias diarias de cada trabajador '
+      }
+    }
+
+      
+
+  }
+  
 
 }
 </script>

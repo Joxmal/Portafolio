@@ -21,6 +21,7 @@
     "@formkit/auto-animate": "^0.8.1",
     "@pinia/nuxt": "^0.5.1",
     "@vueuse/motion": "^2.0.0",
+    "flowbite": "^2.2.1",
     "pinia": "^2.1.7"
   }
 }
