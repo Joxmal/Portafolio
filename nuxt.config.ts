@@ -5,7 +5,6 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
     '@vueuse/motion/nuxt',
-    '@vueuse/motion/nuxt',
     'nuxt-icon'
   ],
   tailwindcss: {
