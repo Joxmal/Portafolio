@@ -86,7 +86,6 @@
             descripsion="creado con la finalidad de optimizar las tareas diarias y actividades realizadas por el departamento de informatica, gracias a esto se mejoro el rendimiento un 50%"
             :imagenes="proyectos.SGI.imagenes"
           /> 
-
       </div>
     </section>
 
@@ -103,7 +102,7 @@
   
 <script setup>
 import {initCarousels} from 'flowbite'
-import {motionFadeUpDelay,motionFadeUpDelayOld} from '/assets/Animations/VueUseMotion'
+import {motionFadeUpDelay,motionFadeUpDelayOld} from '../assets/Animations/VueUseMotion.js'
 
 
 onMounted(()=>{
