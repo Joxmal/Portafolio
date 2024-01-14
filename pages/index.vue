@@ -76,19 +76,29 @@
       <div class="flex flex-col gap-y-4">
 
           <CardsProyecto v-motion="motionFadeUpDelay"
-            titulo="sistema de gestion insterna ofinicina de alcaldia santiago mariño aragua"
-            descripsion="creado con la finalidad de optimizar las tareas diarias y actividades realizadas por el departamento de informatica, gracias a esto se mejoro el rendimiento un 50%"
+            titulo="Sistema de gestión interna oficina de alcaldía santiago Marino Aragua"
+            descripsion="Creado con la finalidad de optimizar las tareas diarias y actividades realizadas por el departamento de informática, gracias a esto se mejoró el rendimiento un 50%"
             :imagenes="proyectos.SGI.imagenes"
           /> 
 
           <CardsProyecto v-motion="motionFadeUpDelay"
-            titulo="sistema de gestion insterna ofinicina de alcaldia santiago mariño aragua"
-            descripsion="creado con la finalidad de optimizar las tareas diarias y actividades realizadas por el departamento de informatica, gracias a esto se mejoro el rendimiento un 50%"
-            :imagenes="proyectos.SGI.imagenes"
+            titulo="Proyecto Personal para guardar inmuebles"
+            descripsion="Creado con la finalidad de recordar y guardar datos relacionados a los inmuebles para luego evaluar dichos datos dependiendo de las circunstancias"
+            :imagenes="proyectos.casas.imagenes"
+          /> 
+
+          <CardsProyecto v-motion="motionFadeUpDelay"
+            titulo="Blog personal sobre VueJS"
+            descripsion="Con la finalidad de aprender, practicar y mejorar cree un blog de uso personal que uso para documentar la información sobre el framework VueJS"
+            :imagenes="proyectos.blog.imagenes"
+          /> 
+          <CardsProyecto v-motion="motionFadeUpDelay"
+            titulo="Blog laboral para la oficina de Informática"
+            descripsion="Proyecto Personal Con el fin de realizar una documentación de los conceptos, actividades y gestiones diarias cree un blog que logro agilizar la obtención de la información que no se encontraba debidamente almacenada para guardar inmuebles"
+            :imagenes="proyectos.blogOficina.imagenes"
           /> 
       </div>
     </section>
-
   </div>
 
 
@@ -103,7 +113,6 @@
 <script setup>
 import {initCarousels} from 'flowbite'
 import {motionFadeUpDelay,motionFadeUpDelayOld} from '../assets/animations/VueUseMotion.js'
-
 
 onMounted(()=>{
   initCarousels()
@@ -146,17 +155,78 @@ const proyectos={
   SGI:{
     imagenes:{
       1:{
-        src:'/proyectos/SGI.jpg',
-        alt:'imagen de la administracion de las asistencias diarias de cada trabajador '
+        src:'/proyectos/SGI/pantalla1.jpg',
+        alt:'imagen de la administracion de las asistencias diarias de cada trabajador ',
       },
       2:{
-        src:'/proyectos/SGI.jpg',
+        src:'/proyectos/SGI/pantalla2.jpg',
+        alt:'imagen de la administracion de las asistencias diarias de cada trabajador '
+      },
+      3:{
+        src:'/proyectos/SGI/pantalla3.jpg',
+        alt:'imagen de la administracion de las asistencias diarias de cada trabajador '
+      },
+      4:{
+        src:'/proyectos/SGI/pantalla4.jpg',
         alt:'imagen de la administracion de las asistencias diarias de cada trabajador '
       }
     }
-
-      
-
+  },
+  casas:{
+    imagenes:{
+      1:{
+        src:'/proyectos/casas/pantalla1.jpg',
+        alt:'imagen del login ',
+      },
+      2:{
+        src:'/proyectos/casas/pantalla2.jpg',
+        alt:'imagen de la seleccion '
+      },
+      3:{
+        src:'/proyectos/casas/pantalla3.jpg',
+        alt:'imagen detallada de cada casa'
+      }
+    }
+  },
+  blog:{
+    imagenes:{
+      1:{
+        src:'/proyectos/blog/pantalla1.jpg',
+        alt:'pantalla del blog personal ',
+      },
+      2:{
+        src:'/proyectos/blog/pantalla2.jpg',
+        alt:'pantalla del blog personal ',
+      },
+      3:{
+        src:'/proyectos/blog/pantalla3.jpg',
+        alt:'pantalla del blog personal ',
+      },
+      4:{
+        src:'/proyectos/blog/pantalla4.jpg',
+        alt:'pantalla del blog personal ',
+      },
+      5:{
+        src:'/proyectos/blog/pantalla5.jpg',
+        alt:'pantalla del blog personal ',
+      },
+    }
+  },
+  blogOficina:{
+    imagenes:{
+      1:{
+        src:'/proyectos/blogOficina/pantalla1.jpg',
+        alt:'blog de oficina ',
+      },
+      2:{
+        src:'/proyectos/blogOficina/pantalla2.jpg',
+        alt:'blog de oficina',
+      },
+      3:{
+        src:'/proyectos/blogOficina/pantalla3.jpg',
+        alt:'blog de oficina ',
+      },
+    }
   }
   
 

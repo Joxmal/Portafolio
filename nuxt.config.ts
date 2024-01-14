@@ -1,6 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  plugins:[
+
+  ],
   modules: [
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
@@ -17,6 +20,7 @@ export default defineNuxtConfig({
     viewer: true,
   },
   runtimeConfig: {
+    RESEND_API_KEY: process.env.RESEND_API_KEY,
     public: {
       motion: {
         directives: {
