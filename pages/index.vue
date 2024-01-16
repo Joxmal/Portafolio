@@ -98,12 +98,12 @@
             :imagenes="proyectos.casas.imagenes">
 
             <template #iconos>
-                <IconPopover targetID="inmuebles" nameIcon="devicon:quasar" content="Vuetify" />
-                <IconPopover targetID="inmuebles" nameIcon="simple-icons:pocketbase" content="Pocketbase"/>
-                <IconPopover targetID="inmuebles" nameIcon="devicon:tailwindcss" content="Tailwind"/>
-                <IconPopover targetID="inmuebles" nameIcon="vscode-icons:file-type-html" content="HTML"/>
-                <IconPopover targetID="inmuebles" nameIcon="logos:css-3" content="CSS"/>
-                <IconPopover targetID="inmuebles" nameIcon="devicon:javascript" content="JavaScript"/>
+              <IconPopover targetID="inmuebles" nameIcon="devicon:quasar" content="Quasar" />
+              <IconPopover targetID="inmuebles" nameIcon="simple-icons:pocketbase" content="Pocketbase"/>
+              <IconPopover targetID="inmuebles" nameIcon="devicon:tailwindcss" content="Tailwind"/>
+              <IconPopover targetID="inmuebles" nameIcon="vscode-icons:file-type-html" content="HTML"/>
+              <IconPopover targetID="inmuebles" nameIcon="logos:css-3" content="CSS"/>
+              <IconPopover targetID="inmuebles" nameIcon="devicon:javascript" content="JavaScript"/>
             </template>
           </CardsProyecto>
 
@@ -113,11 +113,11 @@
             :imagenes="proyectos.blog.imagenes">
 
             <template #iconos>
-                <IconPopover targetID="blogPersonal" nameIcon="devicon:vuejs" content="VUEJS" />
-                <IconPopover targetID="blogPersonal" nameIcon="devicon:tailwindcss" content="Tailwind"/>
-                <IconPopover targetID="blogPersonal" nameIcon="vscode-icons:file-type-html" content="HTML"/>
-                <IconPopover targetID="blogPersonal" nameIcon="logos:css-3" content="CSS"/>
-                <IconPopover targetID="blogPersonal" nameIcon="devicon:javascript" content="JavaScript"/>
+              <IconPopover targetID="blogPersonal" nameIcon="devicon:vuejs" content="VUEJS" />
+              <IconPopover targetID="blogPersonal" nameIcon="devicon:tailwindcss" content="Tailwind"/>
+              <IconPopover targetID="blogPersonal" nameIcon="vscode-icons:file-type-html" content="HTML"/>
+              <IconPopover targetID="blogPersonal" nameIcon="logos:css-3" content="CSS"/>
+              <IconPopover targetID="blogPersonal" nameIcon="devicon:javascript" content="JavaScript"/>
             </template>
 
           </CardsProyecto>
@@ -126,15 +126,13 @@
             titulo="Blog laboral para la oficina de Informática"
             descripsion="Proyecto Personal Con el fin de realizar una documentación de los conceptos, actividades y gestiones diarias cree un blog que logro agilizar la obtención de la información que no se encontraba debidamente almacenada para guardar inmuebles"
             :imagenes="proyectos.blogOficina.imagenes">
-
             <template #iconos>
-                <IconPopover targetID="blogOficina" nameIcon="devicon:vuejs" content="VuejS" />
-                <IconPopover targetID="blogOficina" nameIcon="devicon:tailwindcss" content="Tailwind"/>
-                <IconPopover targetID="blogOficina" nameIcon="vscode-icons:file-type-html" content="HTML"/>
-                <IconPopover targetID="blogOficina" nameIcon="logos:css-3" content="CSS"/>
-                <IconPopover targetID="blogOficina" nameIcon="devicon:javascript" content="JavaScript"/>
+              <IconPopover targetID="blogOficina" nameIcon="devicon:vuejs" content="VuejS" />
+              <IconPopover targetID="blogOficina" nameIcon="devicon:tailwindcss" content="Tailwind"/>
+              <IconPopover targetID="blogOficina" nameIcon="vscode-icons:file-type-html" content="HTML"/>
+              <IconPopover targetID="blogOficina" nameIcon="logos:css-3" content="CSS"/>
+              <IconPopover targetID="blogOficina" nameIcon="devicon:javascript" content="JavaScript"/>
             </template>
-
           </CardsProyecto> 
       </div>
     </section>
