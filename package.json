@@ -23,6 +23,7 @@
     "@vueuse/motion": "^2.0.0",
     "flowbite": "^2.2.1",
     "pinia": "^2.1.7",
-    "resend": "^2.1.0"
+    "resend": "^2.1.0",
+    "toastr": "^2.1.4"
   }
 }
