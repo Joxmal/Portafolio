@@ -48,7 +48,7 @@
         </p>
         <div class="flex justify-center items-center flex-col">
             <h1 class="text-xl font-semibold self-start p-1 px-2 border-b-2 border-blue-500 w-fit  bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text bg-300% animate-gradient">tecnologías</h1>
-            <div class="flex  gap-x-5 pt-4">
+            <div class="flex flex-wrap  gap-x-5 gap-y-2 pt-4">
                 <slot name="iconos" >
 
                 </slot>
