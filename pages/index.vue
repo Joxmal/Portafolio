@@ -1,6 +1,6 @@
 <template>
   <div class=" w-full md:w-[740px] mx-auto ">
-    <section class="pt-14 md:pt-32 " v-motion="motionFadeUpDelayOld">
+    <section class="pt-14 md:pt-32 " v-motion="motionFadeUpDelayOld" id="inicio">
       <div class="flex gap-4">
         <img class=" rounded-full size-24 mb-4 md:size-12" alt="foto José Montes" src="/yo.jpg">
         <a 
@@ -67,7 +67,7 @@
       </Experiencia>
     </section>
 
-    <section class="my-20 pb-24">
+    <section class="my-20 pb-24" id="proyectos">
       <div class="ml-4 mb-4 flex items-center start-0 gap-2" >
         <h2 class="text-2xl font-semibold">Proyectos</h2>
         <Icon name="octicon:project-symlink-16" class="text-2xl"></Icon>
@@ -78,25 +78,64 @@
           <CardsProyecto v-motion="motionFadeUpDelay"
             titulo="Sistema de gestión interna oficina de alcaldía santiago Marino Aragua"
             descripsion="Creado con la finalidad de optimizar las tareas diarias y actividades realizadas por el departamento de informática, gracias a esto se mejoró el rendimiento un 50%"
-            :imagenes="proyectos.SGI.imagenes"
-          /> 
+            :imagenes="proyectos.SGI.imagenes">
+
+            <template #iconos>
+                <IconPopover targetID="sgiOficina" nameIcon="mdi:vuetify" content="Vuetify"  class="text-blue-500 stroke-black stro" />
+                <IconPopover targetID="sgiOficina" nameIcon="simple-icons:pocketbase" content="Pocketbase"/>
+                <IconPopover targetID="sgiOficina" nameIcon="devicon:tailwindcss" content="Tailwind"/>
+                <IconPopover targetID="sgiOficina" nameIcon="logos:nuxt-icon" content="Nuxt" />
+                <IconPopover targetID="sgiOficina" nameIcon="vscode-icons:file-type-html" content="HTML"/>
+                <IconPopover targetID="sgiOficina" nameIcon="logos:css-3" content="CSS"/>
+                <IconPopover targetID="sgiOficina" nameIcon="devicon:javascript" content="JavaScript"/>
+            </template>
+        
+          </CardsProyecto> 
 
           <CardsProyecto v-motion="motionFadeUpDelay"
             titulo="Proyecto Personal para guardar inmuebles"
             descripsion="Creado con la finalidad de recordar y guardar datos relacionados a los inmuebles para luego evaluar dichos datos dependiendo de las circunstancias"
-            :imagenes="proyectos.casas.imagenes"
-          /> 
+            :imagenes="proyectos.casas.imagenes">
+
+            <template #iconos>
+                <IconPopover targetID="inmuebles" nameIcon="devicon:quasar" content="Vuetify" />
+                <IconPopover targetID="inmuebles" nameIcon="simple-icons:pocketbase" content="Pocketbase"/>
+                <IconPopover targetID="inmuebles" nameIcon="devicon:tailwindcss" content="Tailwind"/>
+                <IconPopover targetID="inmuebles" nameIcon="vscode-icons:file-type-html" content="HTML"/>
+                <IconPopover targetID="inmuebles" nameIcon="logos:css-3" content="CSS"/>
+                <IconPopover targetID="inmuebles" nameIcon="devicon:javascript" content="JavaScript"/>
+            </template>
+          </CardsProyecto>
 
           <CardsProyecto v-motion="motionFadeUpDelay"
             titulo="Blog personal sobre VueJS"
             descripsion="Con la finalidad de aprender, practicar y mejorar cree un blog de uso personal que uso para documentar la información sobre el framework VueJS"
-            :imagenes="proyectos.blog.imagenes"
-          /> 
+            :imagenes="proyectos.blog.imagenes">
+
+            <template #iconos>
+                <IconPopover targetID="blogPersonal" nameIcon="devicon:vuejs" content="VUEJS" />
+                <IconPopover targetID="blogPersonal" nameIcon="devicon:tailwindcss" content="Tailwind"/>
+                <IconPopover targetID="blogPersonal" nameIcon="vscode-icons:file-type-html" content="HTML"/>
+                <IconPopover targetID="blogPersonal" nameIcon="logos:css-3" content="CSS"/>
+                <IconPopover targetID="blogPersonal" nameIcon="devicon:javascript" content="JavaScript"/>
+            </template>
+
+          </CardsProyecto>
+
           <CardsProyecto v-motion="motionFadeUpDelay"
             titulo="Blog laboral para la oficina de Informática"
             descripsion="Proyecto Personal Con el fin de realizar una documentación de los conceptos, actividades y gestiones diarias cree un blog que logro agilizar la obtención de la información que no se encontraba debidamente almacenada para guardar inmuebles"
-            :imagenes="proyectos.blogOficina.imagenes"
-          /> 
+            :imagenes="proyectos.blogOficina.imagenes">
+
+            <template #iconos>
+                <IconPopover targetID="blogOficina" nameIcon="devicon:vuejs" content="VuejS" />
+                <IconPopover targetID="blogOficina" nameIcon="devicon:tailwindcss" content="Tailwind"/>
+                <IconPopover targetID="blogOficina" nameIcon="vscode-icons:file-type-html" content="HTML"/>
+                <IconPopover targetID="blogOficina" nameIcon="logos:css-3" content="CSS"/>
+                <IconPopover targetID="blogOficina" nameIcon="devicon:javascript" content="JavaScript"/>
+            </template>
+
+          </CardsProyecto> 
       </div>
     </section>
   </div>
@@ -111,11 +150,12 @@
 </template>
   
 <script setup>
-import {initCarousels} from 'flowbite'
+import {initCarousels, initPopovers} from 'flowbite'
 import {motionFadeUpDelay,motionFadeUpDelayOld} from '../assets/animations/VueUseMotion.js'
 
 onMounted(()=>{
   initCarousels()
+  initPopovers()
 })
 
 useHead({

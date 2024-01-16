@@ -46,6 +46,18 @@
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
             {{ props.descripsion }}
         </p>
+        <div class="flex justify-center items-center flex-col">
+            <h1 class="text-xl font-semibold self-start p-1 px-2 border-b-2 border-blue-500 w-fit  bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text bg-300% animate-gradient">tecnologías</h1>
+            <div class="flex  gap-x-5 pt-4">
+                <slot name="iconos" >
+
+                </slot>
+            </div>
+                
+
+        </div>
+
+
         <a v-if="props.hrefProyecto" href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             Saber mas
              <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
