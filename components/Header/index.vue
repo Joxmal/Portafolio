@@ -4,8 +4,8 @@
             <a href="#inicio">Inicio</a>
             <a href="#experiencia">Experiencia</a>
             <a href="#proyectos">Proyectos</a>
-            <a href="#">Sobre mí</a>
-            <a href="#">Contacto</a>
+            <a href="#sobreMi">Sobre mí</a>
+            <!-- <a href="#contacto">Contacto</a> -->
         </nav>
     </div>
 </template>

@@ -1,5 +1,6 @@
 <template>
   <div class="w-full md:w-[740px] mx-auto">
+    <!-- <EnvioCorreoTest></EnvioCorreoTest> -->
     <section class="pt-14 md:pt-32" v-motion="motionFadeUpDelayOld" id="inicio">
       <div class="flex gap-4">
         <img
@@ -57,15 +58,27 @@
           {{ index }}
         </a>
 
-        <button
-          @click="copiarTexto({texto:'joxmal123@gmail.com'})"
-          class="rounded-full border border-black dark:border-white/10 flex justify-center items-center gap-x-2 py-2 px-4 bg-white/5 hover:bg-white/10 hover:scale-110 transition"
-          target="_blank"
-          href="link.href"
+        <div
+          class="rounded-full border border-black dark:border-white/10 flex justify-center items-center gap-x-2 py-2 px-4 bg-white/5 hover:bg-white/10 transition"
+
         >
+        <a
+          target="_blank"
+          href="mailto:joxmal123@gmail.com"
+         >
           <Icon name="icomoon-free:mail" class="text-2xl dark:text-white " />
           joxmal123@gmail.com
-        </button>
+        </a>
+
+          <IconPopover
+            targetID="contacto"
+            content="copiar"
+            name-icon="mingcute:copy-line"
+            @evento="copiarTexto({texto:'joxmal123@gmail.com'})"
+            class="size-4"
+            class-container="h-4 flex items-center justify-center cursor-pointer"
+          />
+        </div>
       </nav>
     </section>
 
@@ -98,15 +111,15 @@
       </Experiencia>
     </section>
 
-    <section class="my-20 pb-24" id="proyectos">
+    <section class="my-20 " id="proyectos">
       <div class="ml-4 mb-4 flex items-center start-0 gap-2">
         <h2 class="text-2xl font-semibold">Proyectos</h2>
         <Icon name="octicon:project-symlink-16" class="text-2xl"></Icon>
       </div>
 
       <div class="flex flex-col gap-y-4">
+
         <CardsProyecto
-          v-motion="motionFadeUpDelay"
           titulo="Sistema de gestión interna oficina de alcaldía santiago Marino Aragua"
           descripsion="Creado con la finalidad de optimizar las tareas diarias y actividades realizadas por el departamento de informática, gracias a esto se mejoró el rendimiento un 50%"
           :imagenes="proyectos.SGI.imagenes"
@@ -151,8 +164,8 @@
           </template>
         </CardsProyecto>
 
+
         <CardsProyecto
-          v-motion="motionFadeUpDelay"
           titulo="Proyecto Personal para guardar inmuebles"
           descripsion="Creado con la finalidad de recordar y guardar datos relacionados a los inmuebles para luego evaluar dichos datos dependiendo de las circunstancias"
           :imagenes="proyectos.casas.imagenes"
@@ -192,7 +205,6 @@
         </CardsProyecto>
 
         <CardsProyecto
-          v-motion="motionFadeUpDelay"
           titulo="Blog personal sobre VueJS"
           descripsion="Con la finalidad de aprender, practicar y mejorar cree un blog de uso personal que uso para documentar la información sobre el framework VueJS"
           :imagenes="proyectos.blog.imagenes"
@@ -227,7 +239,6 @@
         </CardsProyecto>
 
         <CardsProyecto
-          v-motion="motionFadeUpDelay"
           titulo="Blog laboral para la oficina de Informática"
           descripsion="Proyecto Personal Con el fin de realizar una documentación de los conceptos, actividades y gestiones diarias cree un blog que logro agilizar la obtención de la información que no se encontraba debidamente almacenada para guardar inmuebles"
           :imagenes="proyectos.blogOficina.imagenes"
@@ -244,9 +255,9 @@
               content="Tailwind"
             />
             <IconPopover
-              targetID="blogOficina"
-              nameIcon="vscode-icons:file-type-html"
-              content="HTML"
+            nameIcon="vscode-icons:file-type-html"
+            content="HTML"
+            target-i-d="Tailwind"
             />
             <IconPopover
               targetID="blogOficina"
@@ -261,6 +272,35 @@
           </template>
         </CardsProyecto>
       </div>
+    </section>
+
+    <section class="my-20 pb-12 flex flex-col gap-y-4 text-lg text-pretty border-2 shadow-xl dark:shadow-blue-500 dark:border-yellow-400 p-4 rounded-xl bg-white dark:bg-gray-500/40 relative" id="sobreMi" > 
+      <img class="absolute -right-8 top-0 w-24 rotate-45" src="/muchoTexto.png" alt="imagen de mucho texto meme">
+      <div class="">
+   
+          <img src="/yo.jpg" alt="mi imagen" class="size-36 rounded-full float-left m-2">
+  
+        
+        <p>
+          ¡Hola! Soy José, un desarrolladxor web junior frontend con 1 año de experiencia en una institución gubernamental. Mi pasión por la programación y mi dedicación me han permitido adquirir habilidades en varios lenguajes de programación, como JavaScript, CSS, HTML, Vue.js, Nuxt, Quasar, Node y TypeScript.
+        </p>
+      </div>
+
+
+      <p>
+        Durante mi tiempo en la institución gubernamental, participé en proyectos desafiantes y enriquecedores que me permitieron aplicar mis conocimientos y desarrollar soluciones creativas. Además, he trabajado en 2 proyectos personales que me han permitido explorar mi creatividad y ampliar mis habilidades técnicas.
+      </p>
+        
+      <p>
+        Mi enfoque en el desarrollo frontend se centra en crear experiencias de usuario atractivas y funcionales. Me apasiona el diseño web y la creación de interfaces intuitivas y atractivas. Además, tengo habilidades en el desarrollo de aplicaciones web responsivas y amigables para dispositivos móviles.
+      </p>
+
+      <p>
+        Estoy emocionado de seguir creciendo en mi carrera como desarrollador web y estoy abierto a nuevas oportunidades desafiantes.
+      </p>
+  
+
+      
     </section>
   </div>
 
@@ -278,6 +318,7 @@ import { initCarousels, initPopovers } from "flowbite";
 import {
   motionFadeUpDelay,
   motionFadeUpDelayOld,
+  motionFadeUpDelay1000
 } from "../assets/animations/VueUseMotion.js";
 
 

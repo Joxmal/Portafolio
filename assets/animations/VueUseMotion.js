@@ -22,7 +22,7 @@ export const motionFadeUpDelay1000 ={
     initial:{
         scale:1.1,
         opacity:0,
-        y:200,
+        y:20,
         x:0,
     },
     visible:{
